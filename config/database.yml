@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: Mario2017!
+  socket: /var/lib/mysql/mysql.sock
+
+development:
+  <<: *default
+  database: jobs_development
+
+test:
+  <<: *default
+  database: jobs_test
+
+production:
+  <<: *default
+  database: jobs_production
+  username: jobs
+  password: <%= ENV['HOGE_DATABASE_PASSWORD'] %>
