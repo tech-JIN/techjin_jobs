@@ -10,6 +10,8 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.5'
 gem 'bcrypt', '3.1.7'
 gem 'mysql2', '0.3.18'
+gem 'therubyracer'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', '9.0.0', platform: :mri
