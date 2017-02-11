@@ -15,6 +15,7 @@ gem 'devise'
 
 group :development, :test do
   gem 'byebug', '9.0.0', platform: :mri
+  gem 'pry'
 end
 
 group :development do

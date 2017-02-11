@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'users/index'
+
+  get 'users/show'
+
+  devise_for :users , controllers: {
+        sessions: 'users/sessions'
+      }
+  resources :users, only: [:index, :show]
   get 'pages/index'
 
   get 'pages/show'
